@@ -13,7 +13,8 @@ public class AllHtmlAttrsValues
         if (!initialized)
         {
             initialized = true;
-            var d = RH.GetConsts(typeof(HtmlAttrValue), null);
+            var d = typeof(HtmlAttrValue).GetFields(BindingFlags.Public | BindingFlags.Static | BindingFlags.FlattenHierarchy)
+            .Where(fi => fi.IsLiteral && !fi.IsInitOnly);
 
             foreach (var item in d)
             {

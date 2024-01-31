@@ -4,7 +4,6 @@ global using System;
 global using SunamoValues;
 global using SunamoInterfaces.Interfaces;
 global using SunamoData.Data;
-global using SunamoCompare._sunamo;
 global using SunamoInterfaces.Data;
 global using SunamoValues.Constants;
 global using SunamoArgs;

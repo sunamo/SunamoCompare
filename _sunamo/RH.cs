@@ -1,6 +1,6 @@
-namespace SunamoCompare._sunamo;
+//namespace SunamoCompare._sunamo;
 
-internal static class RH
-{
-    internal static Func<Type, GetMemberArgs, List<FieldInfo>> GetConsts;
-}
+//public static class RH
+//{
+//    public static Func<Type, GetMemberArgs, List<FieldInfo>> GetConsts;
+//}
