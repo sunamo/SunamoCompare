@@ -1,4 +1,4 @@
-namespace SunamoCompare._sunamo;
+namespace SunamoCompare;
 
 //namespace SunamoCompare._sunamo;
 
