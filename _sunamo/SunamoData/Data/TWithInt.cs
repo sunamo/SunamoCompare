@@ -1,8 +1,8 @@
 namespace SunamoCompare;
 
 
-internal class TWithInt<T>
+public class TWithInt<T>
 {
-    internal T t = default;
-    internal int count = 0;
+    public T t = default;
+    public int count = 0;
 }
