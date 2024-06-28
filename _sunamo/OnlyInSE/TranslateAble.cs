@@ -1,3 +1,5 @@
+
+namespace SunamoCompare;
 public class TranslateAble
 {
     

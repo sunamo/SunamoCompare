@@ -1,3 +1,5 @@
+
+namespace SunamoCompare;
 public interface ISunamoComparer<T>
 {
     int Desc(T x, T y);
