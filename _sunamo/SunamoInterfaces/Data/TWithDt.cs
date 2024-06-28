@@ -1,8 +1,8 @@
 namespace SunamoCompare;
 
 
-public class TWithDt<T> : ITWithDt<T>
+internal class TWithDt<T> : ITWithDt<T>
 {
-    public T t { get; set; } = default;
-    public DateTime Dt { get; set; }
+    internal T t { get; set; } = default;
+    internal DateTime Dt { get; set; }
 }
