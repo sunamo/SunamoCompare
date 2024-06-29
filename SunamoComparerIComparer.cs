@@ -62,31 +62,31 @@ public partial class SunamoComparerICompare
     /// </summary>
     public class TWithIntComparer
     {
-        public class Desc<T> : IComparer<TWithInt<T>>
+        public class Desc<T> : IComparer<TWithIntCompare<T>>
         {
-            private ISunamoComparer<TWithInt<T>> _sc = null;
+            private ISunamoComparer<TWithIntCompare<T>> _sc = null;
 
-            public Desc(ISunamoComparer<TWithInt<T>> sc)
+            public Desc(ISunamoComparer<TWithIntCompare<T>> sc)
             {
                 _sc = sc;
             }
 
-            public int Compare(TWithInt<T> x, TWithInt<T> y)
+            public int Compare(TWithIntCompare<T> x, TWithIntCompare<T> y)
             {
                 return _sc.Desc(x, y);
             }
         }
 
-        public class Asc<T> : IComparer<TWithInt<T>>
+        public class Asc<T> : IComparer<TWithIntCompare<T>>
         {
-            private ISunamoComparer<TWithInt<T>> _sc = null;
+            private ISunamoComparer<TWithIntCompare<T>> _sc = null;
 
-            public Asc(ISunamoComparer<TWithInt<T>> sc)
+            public Asc(ISunamoComparer<TWithIntCompare<T>> sc)
             {
                 _sc = sc;
             }
 
-            public int Compare(TWithInt<T> x, TWithInt<T> y)
+            public int Compare(TWithIntCompare<T> x, TWithIntCompare<T> y)
             {
                 return _sc.Asc(x, y);
             }

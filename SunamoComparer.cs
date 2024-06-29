@@ -131,16 +131,16 @@ public class SunamoComparer
 
 
 
-    public class TWithIntSunamoComparer<T> : ISunamoComparer<TWithInt<T>>
+    public class TWithIntSunamoComparer<T> : ISunamoComparer<TWithIntCompare<T>>
     {
-        public int Desc(TWithInt<T> x, TWithInt<T> y)
+        public int Desc(TWithIntCompare<T> x, TWithIntCompare<T> y)
         {
             int a = x.count;
             int b = y.count;
             return a.CompareTo(b) * -1;
         }
 
-        public int Asc(TWithInt<T> x, TWithInt<T> y)
+        public int Asc(TWithIntCompare<T> x, TWithIntCompare<T> y)
         {
             int a = x.count;
             int b = y.count;
