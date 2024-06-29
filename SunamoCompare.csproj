@@ -13,5 +13,6 @@
     <DefineConstants>$(DefineConstants);ASYNC;SunamoCompare</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
+    <Folder Include="_sunamo\SunamoData\Data\" />
   </ItemGroup>
 </Project>
