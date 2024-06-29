@@ -26,16 +26,16 @@ public partial class SunamoComparerICompare
 
     public class TWithDtComparer
     {
-        public class Desc<T> : IComparer<TWithDt<T>>
+        public class Desc<T> : IComparer<TWithDtCompare<T>>
         {
-            private ISunamoComparer<TWithDt<T>> _sc = null;
+            private ISunamoComparer<TWithDtCompare<T>> _sc = null;
 
-            public Desc(ISunamoComparer<TWithDt<T>> sc)
+            public Desc(ISunamoComparer<TWithDtCompare<T>> sc)
             {
                 _sc = sc;
             }
 
-            public int Compare(TWithDt<T> x, TWithDt<T> y)
+            public int Compare(TWithDtCompare<T> x, TWithDtCompare<T> y)
             {
                 return _sc.Desc(x, y);
             }
