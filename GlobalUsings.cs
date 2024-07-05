@@ -16,3 +16,6 @@ global using SunamoCompare._public.SunamoInterfaces.Interfaces;
 global using SunamoCompare._sunamo.SunamoExceptions.OnlyInSE;
 global using SunamoCompare._sunamo.SunamoExceptions._AddedToAllCsproj;
 global using SunamoCompare._sunamo.SunamoValues.Constants;
+global using System.Diagnostics;
+global using System.Net;
+global using System.Threading.Tasks;

@@ -1,4 +1,3 @@
-
 namespace SunamoCompare;
 public interface ISunamoComparer<T>
 {
