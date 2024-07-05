@@ -1,4 +1,4 @@
-namespace SunamoCompare;
+namespace SunamoCompare._sunamo.SunamoExceptions.OnlyInSE;
 
 using System.Collections;
 using System.Text;

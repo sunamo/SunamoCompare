@@ -1,5 +1,5 @@
 
-namespace SunamoCompare;
+namespace SunamoCompare._sunamo.SunamoExceptions.OnlyInSE;
 using System.Diagnostics;
 using System.Text;
 

@@ -1,4 +1,4 @@
-namespace SunamoCompare;
+namespace SunamoCompare._public.SunamoInterfaces.Interfaces;
 
 
 public interface ITWithDt<T>

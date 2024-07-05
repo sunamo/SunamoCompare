@@ -1,4 +1,4 @@
-namespace SunamoCompare;
+namespace SunamoCompare._sunamo.SunamoXlfKeys;
 
 
 
