@@ -6,18 +6,12 @@ public class SunamoComparerICompare
     {
         public int Compare(T x, T y)
         {
-            int a = 0;
-            int b = 0;
+            var a = 0;
+            var b = 0;
 
-            foreach (var item in x)
-            {
-                a++;
-            }
+            foreach (var item in x) a++;
 
-            foreach (var item in y)
-            {
-                b++;
-            }
+            foreach (var item in y) b++;
 
 
             return a.CompareTo(b);
@@ -28,7 +22,7 @@ public class SunamoComparerICompare
     {
         public class Desc<T> : IComparer<TWithDtCompare<T>>
         {
-            private ISunamoComparer<TWithDtCompare<T>> _sc = null;
+            private readonly ISunamoComparer<TWithDtCompare<T>> _sc;
 
             public Desc(ISunamoComparer<TWithDtCompare<T>> sc)
             {
@@ -43,7 +37,7 @@ public class SunamoComparerICompare
 
         public class Asc<T> : IComparer<ITWithDt<T>>
         {
-            private ISunamoComparer<ITWithDt<T>> _sc = null;
+            private readonly ISunamoComparer<ITWithDt<T>> _sc;
 
             public Asc(ISunamoComparer<ITWithDt<T>> sc)
             {
@@ -58,13 +52,14 @@ public class SunamoComparerICompare
     }
 
     /// <summary>
-    /// Usage:vr.Sort(new SunamoComparerICompare.TWithIntComparer.Desc<string>(new SunamoComparer.TWithIntSunamoComparer<string>()));
+    ///     Usage:vr.Sort(new SunamoComparerICompare.TWithIntComparer.Desc
+    ///     <string>(new SunamoComparer.TWithIntSunamoComparer<string>()));
     /// </summary>
     public class TWithIntComparer
     {
         public class Desc<T> : IComparer<TWithIntCompare<T>>
         {
-            private ISunamoComparer<TWithIntCompare<T>> _sc = null;
+            private readonly ISunamoComparer<TWithIntCompare<T>> _sc;
 
             public Desc(ISunamoComparer<TWithIntCompare<T>> sc)
             {
@@ -79,7 +74,7 @@ public class SunamoComparerICompare
 
         public class Asc<T> : IComparer<TWithIntCompare<T>>
         {
-            private ISunamoComparer<TWithIntCompare<T>> _sc = null;
+            private readonly ISunamoComparer<TWithIntCompare<T>> _sc;
 
             public Asc(ISunamoComparer<TWithIntCompare<T>> sc)
             {
@@ -94,53 +89,38 @@ public class SunamoComparerICompare
     }
 
     /// <summary>
-    /// Asc - is always default. Dont create any new classes anymore. When want desc, use reverse!
+    ///     Asc - is always default. Dont create any new classes anymore. When want desc, use reverse!
     /// </summary>
     public class DT : IComparer<DateTime>
     {
-        public static DT Instance = new DT();
+        public static DT Instance = new();
 
         private DT()
         {
-
         }
 
         public int Compare(DateTime a, DateTime b)
         {
             if (a > b)
-            {
                 return NumConsts.one;
-            }
-            else if (a < b)
-            {
+            if (a < b)
                 return NumConsts.mOne;
-            }
-            else
-            {
-                return NumConsts.zeroInt;
-            }
+            return NumConsts.zeroInt;
         }
     }
 
     /// <summary>
-    /// Asc - is always default. Dont create any new classes anymore. When want desc, use reverse!
+    ///     Asc - is always default. Dont create any new classes anymore. When want desc, use reverse!
     /// </summary>
     public class Integer : IComparer<int>
     {
         public int Compare(int a, int b)
         {
             if (a > b)
-            {
                 return NumConsts.one;
-            }
-            else if (a < b)
-            {
+            if (a < b)
                 return NumConsts.mOne;
-            }
-            else
-            {
-                return NumConsts.zeroInt;
-            }
+            return NumConsts.zeroInt;
         }
     }
 
@@ -148,10 +128,10 @@ public class SunamoComparerICompare
     {
         public class Asc : IComparer<string>
         {
-            private ISunamoComparer<string> _sc = null;
+            private readonly ISunamoComparer<string> _sc;
 
             /// <summary>
-            /// As parameter I can insert SunamoComparer.IListCharLength or SunamoComparer.StringLength
+            ///     As parameter I can insert SunamoComparer.IListCharLength or SunamoComparer.StringLength
             /// </summary>
             /// <param name="sc"></param>
             public Asc(ISunamoComparer<string> sc)
@@ -168,10 +148,10 @@ public class SunamoComparerICompare
 
         public class Desc : IComparer<string>
         {
-            private ISunamoComparer<string> _sc = null;
+            private readonly ISunamoComparer<string> _sc;
 
             /// <summary>
-            /// As parameter I can insert SunamoComparer.IListCharLength or SunamoComparer.StringLength
+            ///     As parameter I can insert SunamoComparer.IListCharLength or SunamoComparer.StringLength
             /// </summary>
             /// <param name="sc"></param>
             public Desc(ISunamoComparer<string> sc)
