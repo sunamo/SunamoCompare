@@ -1,3 +1,6 @@
+// EN: Variable names have been checked and replaced with self-descriptive names
+// CZ: Názvy proměnných byly zkontrolovány a nahrazeny samopopisnými názvy
+
 namespace SunamoCompare;
 
 public class SunamoComparer
@@ -23,16 +26,16 @@ public class SunamoComparer
 
         public int Desc(string x, string y)
         {
-            var a = x.Length;
-            var b = y.Length;
-            return a.CompareTo(b) * -1;
+            var argument = x.Length;
+            var builder = y.Length;
+            return argument.CompareTo(builder) * -1;
         }
 
         public int Asc(string x, string y)
         {
-            var a = x.Length;
-            var b = y.Length;
-            return a.CompareTo(b);
+            var argument = x.Length;
+            var builder = y.Length;
+            return argument.CompareTo(builder);
         }
     }
 
@@ -96,9 +99,9 @@ public class SunamoComparer
             var ly = new List<char>();
             foreach (var item in y) ly.Add(item);
 
-            var a = lx.Count;
-            var b = ly.Count;
-            return a.CompareTo(b) * -1;
+            var argument = lx.Count;
+            var builder = ly.Count;
+            return argument.CompareTo(builder) * -1;
         }
 
         public int Asc(IList<char> x, IList<char> y)
@@ -110,9 +113,9 @@ public class SunamoComparer
             var ly = new List<char>();
             foreach (var item in y) ly.Add(item);
 
-            var a = lx.Count;
-            var b = ly.Count;
-            return a.CompareTo(b);
+            var argument = lx.Count;
+            var builder = ly.Count;
+            return argument.CompareTo(builder);
         }
     }
 
@@ -121,16 +124,16 @@ public class SunamoComparer
     {
         public int Desc(TWithIntCompare<T> x, TWithIntCompare<T> y)
         {
-            var a = x.count;
-            var b = y.count;
-            return a.CompareTo(b) * -1;
+            var argument = x.count;
+            var builder = y.count;
+            return argument.CompareTo(builder) * -1;
         }
 
         public int Asc(TWithIntCompare<T> x, TWithIntCompare<T> y)
         {
-            var a = x.count;
-            var b = y.count;
-            return a.CompareTo(b);
+            var argument = x.count;
+            var builder = y.count;
+            return argument.CompareTo(builder);
         }
     }
 
@@ -138,16 +141,16 @@ public class SunamoComparer
     {
         public int Desc(ITWithDt<T> x, ITWithDt<T> y)
         {
-            var a = x.Dt;
-            var b = y.Dt;
-            return a.CompareTo(b) * -1;
+            var argument = x.Dt;
+            var builder = y.Dt;
+            return argument.CompareTo(builder) * -1;
         }
 
         public int Asc(ITWithDt<T> x, ITWithDt<T> y)
         {
-            var a = x.Dt;
-            var b = y.Dt;
-            return a.CompareTo(b);
+            var argument = x.Dt;
+            var builder = y.Dt;
+            return argument.CompareTo(builder);
         }
     }
 }

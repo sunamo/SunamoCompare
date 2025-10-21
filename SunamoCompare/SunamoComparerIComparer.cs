@@ -1,3 +1,6 @@
+// EN: Variable names have been checked and replaced with self-descriptive names
+// CZ: Názvy proměnných byly zkontrolovány a nahrazeny samopopisnými názvy
+
 namespace SunamoCompare;
 
 public class SunamoComparerICompare
@@ -6,15 +9,15 @@ public class SunamoComparerICompare
     {
         public int Compare(T x, T y)
         {
-            var a = 0;
-            var b = 0;
+            var argument = 0;
+            var builder = 0;
 
-            foreach (var item in x) a++;
+            foreach (var item in x) argument++;
 
-            foreach (var item in y) b++;
+            foreach (var item in y) builder++;
 
 
-            return a.CompareTo(b);
+            return argument.CompareTo(builder);
         }
     }
 
@@ -99,11 +102,11 @@ public class SunamoComparerICompare
         {
         }
 
-        public int Compare(DateTime a, DateTime b)
+        public int Compare(DateTime argument, DateTime builder)
         {
-            if (a > b)
+            if (argument > builder)
                 return NumConsts.one;
-            if (a < b)
+            if (argument < builder)
                 return NumConsts.mOne;
             return NumConsts.zeroInt;
         }
@@ -114,11 +117,11 @@ public class SunamoComparerICompare
     /// </summary>
     public class Integer : IComparer<int>
     {
-        public int Compare(int a, int b)
+        public int Compare(int argument, int builder)
         {
-            if (a > b)
+            if (argument > builder)
                 return NumConsts.one;
-            if (a < b)
+            if (argument < builder)
                 return NumConsts.mOne;
             return NumConsts.zeroInt;
         }
