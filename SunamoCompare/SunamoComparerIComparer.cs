@@ -4,17 +4,17 @@ public class SunamoComparerICompare
 {
     public class IListCharCountAsc<T> : IComparer<T> where T : IList<char>
     {
-        public int Compare(T x, T y)
+        public int Compare(T firstValue, T secondValue)
         {
-            var argument = 0;
-            var builder = 0;
+            var firstCount = 0;
+            var secondCount = 0;
 
-            foreach (var item in x) argument++;
+            foreach (var item in firstValue) firstCount++;
 
-            foreach (var item in y) builder++;
+            foreach (var item in secondValue) secondCount++;
 
 
-            return argument.CompareTo(builder);
+            return firstCount.CompareTo(secondCount);
         }
     }
 
@@ -29,9 +29,9 @@ public class SunamoComparerICompare
                 _sc = sc;
             }
 
-            public int Compare(TWithDtCompare<T> x, TWithDtCompare<T> y)
+            public int Compare(TWithDtCompare<T> firstValue, TWithDtCompare<T> secondValue)
             {
-                return _sc.Desc(x, y);
+                return _sc.Desc(firstValue, secondValue);
             }
         }
 
@@ -44,9 +44,9 @@ public class SunamoComparerICompare
                 _sc = sc;
             }
 
-            public int Compare(ITWithDt<T> x, ITWithDt<T> y)
+            public int Compare(ITWithDt<T> firstValue, ITWithDt<T> secondValue)
             {
-                return _sc.Asc(x, y);
+                return _sc.Asc(firstValue, secondValue);
             }
         }
     }
@@ -66,9 +66,9 @@ public class SunamoComparerICompare
                 _sc = sc;
             }
 
-            public int Compare(TWithIntCompare<T> x, TWithIntCompare<T> y)
+            public int Compare(TWithIntCompare<T> firstValue, TWithIntCompare<T> secondValue)
             {
-                return _sc.Desc(x, y);
+                return _sc.Desc(firstValue, secondValue);
             }
         }
 
@@ -81,9 +81,9 @@ public class SunamoComparerICompare
                 _sc = sc;
             }
 
-            public int Compare(TWithIntCompare<T> x, TWithIntCompare<T> y)
+            public int Compare(TWithIntCompare<T> firstValue, TWithIntCompare<T> secondValue)
             {
-                return _sc.Asc(x, y);
+                return _sc.Asc(firstValue, secondValue);
             }
         }
     }
@@ -99,13 +99,13 @@ public class SunamoComparerICompare
         {
         }
 
-        public int Compare(DateTime argument, DateTime builder)
+        public int Compare(DateTime firstValue, DateTime secondValue)
         {
-            if (argument > builder)
-                return NumConsts.one;
-            if (argument < builder)
-                return NumConsts.mOne;
-            return NumConsts.zeroInt;
+            if (firstValue > secondValue)
+                return NumConsts.One;
+            if (firstValue < secondValue)
+                return NumConsts.MinusOne;
+            return NumConsts.ZeroInt;
         }
     }
 
@@ -114,13 +114,13 @@ public class SunamoComparerICompare
     /// </summary>
     public class Integer : IComparer<int>
     {
-        public int Compare(int argument, int builder)
+        public int Compare(int firstValue, int secondValue)
         {
-            if (argument > builder)
-                return NumConsts.one;
-            if (argument < builder)
-                return NumConsts.mOne;
-            return NumConsts.zeroInt;
+            if (firstValue > secondValue)
+                return NumConsts.One;
+            if (firstValue < secondValue)
+                return NumConsts.MinusOne;
+            return NumConsts.ZeroInt;
         }
     }
 
@@ -140,9 +140,9 @@ public class SunamoComparerICompare
             }
 
 
-            public int Compare(string x, string y)
+            public int Compare(string firstValue, string secondValue)
             {
-                return _sc.Asc(x, y);
+                return _sc.Asc(firstValue, secondValue);
             }
         }
 
@@ -160,9 +160,9 @@ public class SunamoComparerICompare
             }
 
 
-            public int Compare(string x, string y)
+            public int Compare(string firstValue, string secondValue)
             {
-                return _sc.Desc(x, y);
+                return _sc.Desc(firstValue, secondValue);
             }
         }
     }

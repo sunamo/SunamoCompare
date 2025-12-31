@@ -2,6 +2,6 @@ namespace SunamoCompare;
 
 public class TWithIntCompare<T>
 {
-    public int count = 0;
-    public T t = default;
+    public int Count { get; set; } = 0;
+    public T Value { get; set; } = default;
 }

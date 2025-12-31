@@ -6,14 +6,14 @@ public class SunamoComparer
     {
         public static Float Instance = new();
 
-        public int Desc(float x, float y)
+        public int Desc(float firstValue, float secondValue)
         {
-            return x.CompareTo(y) * -1;
+            return firstValue.CompareTo(secondValue) * -1;
         }
 
-        public int Asc(float x, float y)
+        public int Asc(float firstValue, float secondValue)
         {
-            return x.CompareTo(y);
+            return firstValue.CompareTo(secondValue);
         }
     }
 
@@ -21,18 +21,18 @@ public class SunamoComparer
     {
         public static StringLength Instance = new();
 
-        public int Desc(string x, string y)
+        public int Desc(string firstValue, string secondValue)
         {
-            var argument = x.Length;
-            var builder = y.Length;
-            return argument.CompareTo(builder) * -1;
+            var firstLength = firstValue.Length;
+            var secondLength = secondValue.Length;
+            return firstLength.CompareTo(secondLength) * -1;
         }
 
-        public int Asc(string x, string y)
+        public int Asc(string firstValue, string secondValue)
         {
-            var argument = x.Length;
-            var builder = y.Length;
-            return argument.CompareTo(builder);
+            var firstLength = firstValue.Length;
+            var secondLength = secondValue.Length;
+            return firstLength.CompareTo(secondLength);
         }
     }
 
@@ -40,14 +40,14 @@ public class SunamoComparer
     {
         public static Integer64 Instance = new();
 
-        public int Desc(long x, long y)
+        public int Desc(long firstValue, long secondValue)
         {
-            return x.CompareTo(y) * -1;
+            return firstValue.CompareTo(secondValue) * -1;
         }
 
-        public int Asc(long x, long y)
+        public int Asc(long firstValue, long secondValue)
         {
-            return x.CompareTo(y);
+            return firstValue.CompareTo(secondValue);
         }
     }
 
@@ -55,14 +55,14 @@ public class SunamoComparer
     {
         public static Integer Instance = new();
 
-        public int Desc(int x, int y)
+        public int Desc(int firstValue, int secondValue)
         {
-            return x.CompareTo(y) * -1;
+            return firstValue.CompareTo(secondValue) * -1;
         }
 
-        public int Asc(int x, int y)
+        public int Asc(int firstValue, int secondValue)
         {
-            return x.CompareTo(y);
+            return firstValue.CompareTo(secondValue);
         }
     }
 
@@ -71,14 +71,14 @@ public class SunamoComparer
         public static DT Instance = new();
 
         // ToList() here must be - sorted still contains reference to original collection
-        public int Desc(DateTime x, DateTime y)
+        public int Desc(DateTime firstValue, DateTime secondValue)
         {
-            return x.CompareTo(y) * -1;
+            return firstValue.CompareTo(secondValue) * -1;
         }
 
-        public int Asc(DateTime x, DateTime y)
+        public int Asc(DateTime firstValue, DateTime secondValue)
         {
-            return x.CompareTo(y);
+            return firstValue.CompareTo(secondValue);
         }
     }
 
@@ -87,67 +87,67 @@ public class SunamoComparer
     {
         public static IListCharLength Instance = new();
 
-        public int Desc(IList<char> x, IList<char> y)
+        public int Desc(IList<char> firstValue, IList<char> secondValue)
         {
-            var lx = new List<char>();
+            var firstList = new List<char>();
 
-            foreach (var item in x) lx.Add(item);
+            foreach (var item in firstValue) firstList.Add(item);
 
-            var ly = new List<char>();
-            foreach (var item in y) ly.Add(item);
+            var secondList = new List<char>();
+            foreach (var item in secondValue) secondList.Add(item);
 
-            var argument = lx.Count;
-            var builder = ly.Count;
-            return argument.CompareTo(builder) * -1;
+            var firstCount = firstList.Count;
+            var secondCount = secondList.Count;
+            return firstCount.CompareTo(secondCount) * -1;
         }
 
-        public int Asc(IList<char> x, IList<char> y)
+        public int Asc(IList<char> firstValue, IList<char> secondValue)
         {
-            var lx = new List<char>();
+            var firstList = new List<char>();
 
-            foreach (var item in x) lx.Add(item);
+            foreach (var item in firstValue) firstList.Add(item);
 
-            var ly = new List<char>();
-            foreach (var item in y) ly.Add(item);
+            var secondList = new List<char>();
+            foreach (var item in secondValue) secondList.Add(item);
 
-            var argument = lx.Count;
-            var builder = ly.Count;
-            return argument.CompareTo(builder);
+            var firstCount = firstList.Count;
+            var secondCount = secondList.Count;
+            return firstCount.CompareTo(secondCount);
         }
     }
 
 
     public class TWithIntSunamoComparer<T> : ISunamoComparer<TWithIntCompare<T>>
     {
-        public int Desc(TWithIntCompare<T> x, TWithIntCompare<T> y)
+        public int Desc(TWithIntCompare<T> firstValue, TWithIntCompare<T> secondValue)
         {
-            var argument = x.count;
-            var builder = y.count;
-            return argument.CompareTo(builder) * -1;
+            var firstCount = firstValue.Count;
+            var secondCount = secondValue.Count;
+            return firstCount.CompareTo(secondCount) * -1;
         }
 
-        public int Asc(TWithIntCompare<T> x, TWithIntCompare<T> y)
+        public int Asc(TWithIntCompare<T> firstValue, TWithIntCompare<T> secondValue)
         {
-            var argument = x.count;
-            var builder = y.count;
-            return argument.CompareTo(builder);
+            var firstCount = firstValue.Count;
+            var secondCount = secondValue.Count;
+            return firstCount.CompareTo(secondCount);
         }
     }
 
     public class TWithDtSunamoComparer<T> : ISunamoComparer<ITWithDt<T>>
     {
-        public int Desc(ITWithDt<T> x, ITWithDt<T> y)
+        public int Desc(ITWithDt<T> firstValue, ITWithDt<T> secondValue)
         {
-            var argument = x.Dt;
-            var builder = y.Dt;
-            return argument.CompareTo(builder) * -1;
+            var firstDateTime = firstValue.Dt;
+            var secondDateTime = secondValue.Dt;
+            return firstDateTime.CompareTo(secondDateTime) * -1;
         }
 
-        public int Asc(ITWithDt<T> x, ITWithDt<T> y)
+        public int Asc(ITWithDt<T> firstValue, ITWithDt<T> secondValue)
         {
-            var argument = x.Dt;
-            var builder = y.Dt;
-            return argument.CompareTo(builder);
+            var firstDateTime = firstValue.Dt;
+            var secondDateTime = secondValue.Dt;
+            return firstDateTime.CompareTo(secondDateTime);
         }
     }
 }
