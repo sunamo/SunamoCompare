@@ -52,7 +52,7 @@ public class SunamoComparerICompare
     }
 
     /// <summary>
-    ///     Usage:vr.Sort(new SunamoComparerICompare.TWithIntComparer.Desc
+    ///     Usage:result.Sort(new SunamoComparerICompare.TWithIntComparer.Desc
     ///     <string>(new SunamoComparer.TWithIntSunamoComparer<string>()));
     /// </summary>
     public class TWithIntComparer
