@@ -1,15 +1,22 @@
 namespace SunamoCompare._sunamo.SunamoExceptions;
 
-// EN: Variable names have been checked and replaced with self-descriptive names
-// CZ: Názvy proměnných byly zkontrolovány a nahrazeny samopopisnými názvy
-// © www.sunamo.cz. All Rights Reserved.
+/// <summary>
+/// Contains exception handling utilities and shared resources.
+/// </summary>
 internal sealed partial class Exceptions
 {
     #region Other
 
-#region IsNullOrWhitespace
+    #region IsNullOrWhitespace
+    /// <summary>
+    /// StringBuilder for inner additional information in exception messages.
+    /// </summary>
     internal readonly static StringBuilder AdditionalInfoInnerStringBuilder = new();
+
+    /// <summary>
+    /// StringBuilder for additional information in exception messages.
+    /// </summary>
     internal readonly static StringBuilder AdditionalInfoStringBuilder = new();
     #endregion
-#endregion
+    #endregion
 }
