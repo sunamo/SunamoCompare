@@ -1,3 +1,4 @@
+// variables names: ok
 namespace SunamoCompare._sunamo.SunamoValues.Constants;
 
 /// <summary>
