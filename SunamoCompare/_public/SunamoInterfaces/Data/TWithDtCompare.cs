@@ -1,4 +1,3 @@
-// variables names: ok
 namespace SunamoCompare._public.SunamoInterfaces.Data;
 
 /// <summary>
