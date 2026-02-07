@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="SunamoCompare.Tests\\SunamoCompare.Tests.csproj" />
+  <Project Path="RunnerCompare\\RunnerCompare.csproj" />
+  <Project Path="SunamoCompare\SunamoCompare.csproj" />
+</Solution>
