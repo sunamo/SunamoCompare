@@ -192,16 +192,7 @@ public class SunamoComparer
         /// <returns>A comparison result for descending order.</returns>
         public int Desc(IList<char> firstValue, IList<char> secondValue)
         {
-            var firstList = new List<char>();
-
-            foreach (var item in firstValue) firstList.Add(item);
-
-            var secondList = new List<char>();
-            foreach (var item in secondValue) secondList.Add(item);
-
-            var firstCount = firstList.Count;
-            var secondCount = secondList.Count;
-            return firstCount.CompareTo(secondCount) * -1;
+            return firstValue.Count.CompareTo(secondValue.Count) * -1;
         }
 
         /// <summary>
@@ -212,16 +203,7 @@ public class SunamoComparer
         /// <returns>A comparison result for ascending order.</returns>
         public int Asc(IList<char> firstValue, IList<char> secondValue)
         {
-            var firstList = new List<char>();
-
-            foreach (var item in firstValue) firstList.Add(item);
-
-            var secondList = new List<char>();
-            foreach (var item in secondValue) secondList.Add(item);
-
-            var firstCount = firstList.Count;
-            var secondCount = secondList.Count;
-            return firstCount.CompareTo(secondCount);
+            return firstValue.Count.CompareTo(secondValue.Count);
         }
     }
 
