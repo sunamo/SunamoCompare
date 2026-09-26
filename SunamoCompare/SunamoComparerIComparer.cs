@@ -19,18 +19,10 @@ public class SunamoComparerICompare
         /// <returns>A comparison result for ascending order.</returns>
         public int Compare(T? firstValue, T? secondValue)
         {
-            if (firstValue == null) return secondValue == null ? 0 : -1;
-            if (secondValue == null) return 1;
+            if (firstValue is null) return secondValue is null ? 0 : -1;
+            if (secondValue is null) return 1;
 
-            var firstCount = 0;
-            var secondCount = 0;
-
-            foreach (var item in firstValue) firstCount++;
-
-            foreach (var item in secondValue) secondCount++;
-
-
-            return firstCount.CompareTo(secondCount);
+            return firstValue.Count.CompareTo(secondValue.Count);
         }
     }
 
@@ -64,8 +56,8 @@ public class SunamoComparerICompare
             /// <returns>A comparison result for descending order.</returns>
             public int Compare(TWithDtCompare<T>? firstValue, TWithDtCompare<T>? secondValue)
             {
-                if (firstValue == null) return secondValue == null ? 0 : -1;
-                if (secondValue == null) return 1;
+                if (firstValue is null) return secondValue is null ? 0 : -1;
+                if (secondValue is null) return 1;
                 return _sc.Desc(firstValue, secondValue);
             }
         }
@@ -95,8 +87,8 @@ public class SunamoComparerICompare
             /// <returns>A comparison result for ascending order.</returns>
             public int Compare(ITWithDt<T>? firstValue, ITWithDt<T>? secondValue)
             {
-                if (firstValue == null) return secondValue == null ? 0 : -1;
-                if (secondValue == null) return 1;
+                if (firstValue is null) return secondValue is null ? 0 : -1;
+                if (secondValue is null) return 1;
                 return _sc.Asc(firstValue, secondValue);
             }
         }
@@ -133,8 +125,8 @@ public class SunamoComparerICompare
             /// <returns>A comparison result for descending order.</returns>
             public int Compare(TWithIntCompare<T>? firstValue, TWithIntCompare<T>? secondValue)
             {
-                if (firstValue == null) return secondValue == null ? 0 : -1;
-                if (secondValue == null) return 1;
+                if (firstValue is null) return secondValue is null ? 0 : -1;
+                if (secondValue is null) return 1;
                 return _sc.Desc(firstValue, secondValue);
             }
         }
@@ -164,8 +156,8 @@ public class SunamoComparerICompare
             /// <returns>A comparison result for ascending order.</returns>
             public int Compare(TWithIntCompare<T>? firstValue, TWithIntCompare<T>? secondValue)
             {
-                if (firstValue == null) return secondValue == null ? 0 : -1;
-                if (secondValue == null) return 1;
+                if (firstValue is null) return secondValue is null ? 0 : -1;
+                if (secondValue is null) return 1;
                 return _sc.Asc(firstValue, secondValue);
             }
         }
@@ -254,8 +246,8 @@ public class SunamoComparerICompare
             /// <returns>A comparison result for ascending order.</returns>
             public int Compare(string? firstValue, string? secondValue)
             {
-                if (firstValue == null) return secondValue == null ? 0 : -1;
-                if (secondValue == null) return 1;
+                if (firstValue is null) return secondValue is null ? 0 : -1;
+                if (secondValue is null) return 1;
                 return _sc.Asc(firstValue, secondValue);
             }
         }
@@ -285,8 +277,8 @@ public class SunamoComparerICompare
             /// <returns>A comparison result for descending order.</returns>
             public int Compare(string? firstValue, string? secondValue)
             {
-                if (firstValue == null) return secondValue == null ? 0 : -1;
-                if (secondValue == null) return 1;
+                if (firstValue is null) return secondValue is null ? 0 : -1;
+                if (secondValue is null) return 1;
                 return _sc.Desc(firstValue, secondValue);
             }
         }
