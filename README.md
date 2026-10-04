@@ -1,5 +1,10 @@
 # SunamoCompare
 
+## Short description
+
+Knihovna pro řazení kolekcí podle různých porovnávacích podmínek.
+
+
 Mainly sort collections by variours compare conditions
 
 ## Overview
